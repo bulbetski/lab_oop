@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/prose/Desktop/Projects/laba_1_2/complex_file.cpp
+iostream
+-
+complex_file.h
+C:/Users/prose/Desktop/Projects/laba_1_2/complex_file.h
+fstream
+-
+math.h
+-
+
+C:/Users/prose/Desktop/Projects/laba_1_2/complex_file.h
+vector
+-
+string
+-
+
+C:/Users/prose/Desktop/Projects/laba_1_2/main.cpp
+iostream
+-
+fstream
+-
+complex_file.h
+C:/Users/prose/Desktop/Projects/laba_1_2/complex_file.h
+
