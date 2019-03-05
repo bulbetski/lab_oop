@@ -16,10 +16,10 @@ double input(){
         bool wrong_input = false;
         int number_of_dots = 0;
         int number_of_minuses = 0;
-        for (int i = 0; i < inp.size(); i++){
-            if (inp[i] == '.')
+        for (auto c: inp){
+            if (c == '.')
                 number_of_dots++;
-            if (inp[i] == '-')
+            if (c == '-')
                 number_of_minuses++;
         }
 
@@ -51,8 +51,8 @@ double input(){
                     if (inp[0] == '.' || inp[inp.size()-1] == '.')
                         wrong_input = true;
                     else {
-                        for (int i = 0; i < inp.size(); i++){
-                            if ((inp[i] < '0' || inp[i] > '9') && inp[i] != '.')
+                        for (auto c: inp){
+                            if ((c < '0' || c > '9') && c != '.')
                                 wrong_input = true;
                         }
                     }
