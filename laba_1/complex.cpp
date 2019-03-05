@@ -14,20 +14,49 @@ double input(){
 
     while (true){
         bool wrong_input = false;
-        if (inp[0] == 45){
+        int number_of_dots = 0;
+        int number_of_minuses = 0;
+        for (int i = 0; i < inp.size(); i++){
+            if (inp[i] == '.')
+                number_of_dots++;
+            if (inp[i] == '-')
+                number_of_minuses++;
+        }
+
+        if (inp[0] == '-'){
             if (inp.size() == 1)
                 wrong_input = true;
             else{
-                for (int i = 1; i < inp.size(); i++){
-                    if (inp[i] < '0' || inp[i] > '9')
+                if (number_of_dots > 1 || number_of_minuses > 1)
+                    wrong_input = true;
+                else {
+                    if (inp[1] == '.' || inp[inp.size()-1] == '.')
                         wrong_input = true;
+                    else {
+                        for (int i = 1; i < inp.size(); i++){
+                            if ((inp[i] < '0' || inp[i] > '9') && inp[i] != '.')
+                                wrong_input = true;
+                        }
+                    }
                 }
             }
         }
         else {
-            for (auto num: inp){
-                if (num < '0' || num > '9')
+            if (inp[0] == '.')
+                wrong_input = true;
+            else{
+                if (number_of_dots > 1)
                     wrong_input = true;
+                else{
+                    if (inp[0] == '.' || inp[inp.size()-1] == '.')
+                        wrong_input = true;
+                    else {
+                        for (int i = 0; i < inp.size(); i++){
+                            if ((inp[i] < '0' || inp[i] > '9') && inp[i] != '.')
+                                wrong_input = true;
+                        }
+                    }
+                }
             }
         }
         if (wrong_input){
