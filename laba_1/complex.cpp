@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include "complex.h"
-#include <string>
 #include <iomanip>
 
 using namespace std;
@@ -75,7 +74,7 @@ void Complex::output(){
     cout << Im << "i";
 }
 void add(struct Complex c1, struct Complex c2) {
-    cout << "Addition: " << endl;
+    cout << "Sum of your numbers is " << endl;
     c1.output();
     cout << " + ";
     c2.output();
@@ -85,7 +84,7 @@ void add(struct Complex c1, struct Complex c2) {
     cout << c1.Im + c2.Im << "i" << endl << endl;
 }
 void sub(struct Complex c1, struct Complex c2){
-    cout << "Substraction: " << endl;
+    cout << "Result of subtraction is " << endl;
     c1.output();
     cout << " - ";
     c2.output();
@@ -97,7 +96,7 @@ void sub(struct Complex c1, struct Complex c2){
 void product(struct Complex c1, struct Complex c2){
     double re = c1.Re*c2.Re - c1.Im*c2.Im;
     double im = c1.Re*c2.Im + c1.Im*c2.Re;
-    cout << "Production: " << endl;
+    cout << "Result of production is " << endl;
     c1.output();
     cout << " * ";
     c2.output();
@@ -109,7 +108,7 @@ void product(struct Complex c1, struct Complex c2){
 void division(struct Complex c1, struct Complex c2){
     double re = (c1.Re*c2.Re - c1.Im*-c2.Im)/(c2.Re*c2.Re + c2.Im*c2.Im);
     double im = (c1.Re*-c2.Im + c1.Im*c2.Re)/(c2.Re*c2.Re + c2.Im*c2.Im);
-    cout << "Division: " << endl;
+    cout << "Result of division is " << endl;
     c1.output();
     cout << " / ";
     c2.output();

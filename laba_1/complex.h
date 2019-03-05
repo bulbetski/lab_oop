@@ -1,9 +1,11 @@
 //
 // Created by prose on 01.03.2019.
 //
-
 #ifndef LABA_1_COMPLEX_H
 #define LABA_1_COMPLEX_H
+
+#include <string>
+
 
 struct Complex{
     double Re;

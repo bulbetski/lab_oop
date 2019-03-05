@@ -1,11 +1,11 @@
 #include <iostream>
 #include "complex.h"
-#include <string>
 
 using namespace std;
 
 int main()
 {
+    int operation;
     Complex c1;
     Complex c2;
     cout << "---------------------------------------" << endl;
@@ -31,10 +31,30 @@ int main()
 
     cout << "---------------------------------------" << endl;
 
-    add(c1, c2);
-    sub(c1, c2);
-    product(c1, c2);
-    division(c1, c2);
+    cout << "Type in the number of operation you want to use: " << endl;
+    cout << "[1] for addition\n[2] for subtraction\n[3] for production\n[4] for division\n";
+    cin >> operation;
+    switch (operation){
+        case 1:{
+            add(c1, c2);
+            break;
+        }
+        case 2:{
+            sub(c1, c2);
+            break;
+        }
+        case 3:{
+            product(c1, c2);
+            break;
+        }
+        case 4:{
+            division(c1, c2);
+            break;
+        }
+        default:{
+            break;
+        }
+    }
 
     cout << "---------------------------------------" << endl;
 
