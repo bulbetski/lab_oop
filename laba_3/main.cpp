@@ -13,9 +13,19 @@ int main() {
     cout << endl;
 
     //3_3
-    Complex c1(1,1);
-    c1.output();
+    Complex *c1 = new Complex;
+    c1 -> output();
     cout << endl;
 
+    //3_4
+    Vector v1;
+    int size;
+    cout << "Number of coordinates: ";
+    cin >> size;
+    v1.vfill(size);
+    v1.vdisplay();
+
+
+    getchar(); getchar();
     return 0;
 }

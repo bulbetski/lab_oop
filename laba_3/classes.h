@@ -5,6 +5,7 @@
 #define LABA_3_CLASSES_H
 #include <iostream>
 #include <string>
+#include <vector>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -36,7 +37,15 @@ class Complex {
 public:
     double Re;
     double Im;
-    Complex(double Re, double Im) : Re(Re), Im(Im) {}
+    Complex(double Re = 0, double Im = 0) : Re(Re), Im(Im) {}
     void output();
+};
+
+//3_4
+class Vector{
+public:
+    std::vector<double> coord;
+    void vfill(int size);
+    void vdisplay();
 };
 #endif //LABA_3_CLASSES_H
