@@ -38,9 +38,9 @@ void Complex::get_Complex() {
 }
 
 //3_4
-void Vector::set_Vector(int size) {
+void Vector::set_Vector() {
     double inp;
-    for (int i = 0; i < size; i++){
+    for (int i = 0; i < coord.size(); i++){
         cin >> inp;
         coord.push_back(inp);
     }
@@ -49,3 +49,23 @@ void Vector::get_Vector() {
     for (int i = 0; i < coord.size(); i++)
         cout << "Coord_" << i+1 << ": " << coord.at(i) << endl;
 }
+
+//4_1
+Child::Child(const std::string &name, const std::string &surname, int age) : name(name), surname(surname), age(age) {}
+
+Child::Child(const Child &source): name(source.name), surname(source.surname), age(source.age){}
+
+//4_2
+Tiles::Tiles(const std::string &brand, double size_h, double size_w, double price) : brand(brand), size_h(size_h),
+                                                                                     size_w(size_w), price(price) {}
+
+Tiles::Tiles(const Tiles &source): brand(source.brand), size_h(source.size_h), size_w(source.size_w), price(source.price){}
+
+//4_3
+Complex::Complex(double Re, double Im) : Re(Re), Im(Im) {}
+
+Complex::Complex(const Complex &source): Re(source.Re), Im(source.Im) {}
+
+//4_4
+Vector::Vector(int size): coord(size, 0){}
+

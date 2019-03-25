@@ -9,7 +9,11 @@
 using std::cout;
 using std::cin;
 using std::endl;
+//2_1
+int sum(int array[], int size);
+int product(int array[], int size);
 
+//2_2
 void output(int [], int);
 void invert(int [], int);
 void increase(int [], int);
