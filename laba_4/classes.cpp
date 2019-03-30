@@ -13,7 +13,7 @@ void Child::set_Child() {
 void Child::get_Child(){
     cout << "Name: " << name << endl
          << "Surname: " << surname << endl
-         << "Age: " << age << endl;
+         << "Age: " << age << endl << endl;
 }
 
 //3_2
@@ -21,7 +21,7 @@ void Tiles::get_Data() {
     cout << "Brand: " << brand << endl
          << "Height: " << size_h << endl
          << "Width: " << size_w << endl
-         << "Price: " << price << endl;
+         << "Price: " << price << endl << endl;
 }
 
 //3_3
@@ -34,15 +34,16 @@ void Complex::set_Complex() {
 void Complex::get_Complex() {
     cout << "Re: " << Re << endl
          << "Im: " << Im << endl
-         << "Module: " << sqrt(Re*Re + Im*Im) << endl;
+         << "Module: " << sqrt(Re*Re + Im*Im) << endl << endl;
 }
 
 //3_4
 void Vector::set_Vector() {
     double inp;
+    cout << "Type in your coordinates: ";
     for (int i = 0; i < coord.size(); i++){
         cin >> inp;
-        coord.push_back(inp);
+        coord.at(i) = inp;
     }
 }
 void Vector::get_Vector() {
@@ -69,3 +70,4 @@ Complex::Complex(const Complex &source): Re(source.Re), Im(source.Im) {}
 //4_4
 Vector::Vector(int size): coord(size, 0){}
 
+Vector::Vector(const Vector &source): coord(source.coord) {}

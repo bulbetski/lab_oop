@@ -1,26 +1,33 @@
 #include "classes.h"
 
+
 int main() {
-    //3_1
-    Child first_child("Zakhar", "Proselkov", 18);
-    Child second_child = first_child;
-    second_child.get_Child();
-/*
-    //3_2
-    Tiles p1;
+    //4_1
 
+    Child c1("Zalhar", "Proselkov", 18);
+    Child c2 = c1;
+    c2.get_Child();
 
-    //3_3
-    auto *c1 = new Complex;
+    //4_2
 
-    delete c1;
+    Tiles t1("Tiles", 1, 1, 1);
+    Tiles t2 = t1;
+    t1.get_Data();
 
-    //3_4
-    Vector v1(2);
-*/
+    //4_3
 
+    Complex n1(1,1);
+    Complex n2 = n1;
+    n1.get_Complex();
 
+    //4_4
+    int n;
+    cout << "Type in the number of coordinates: ";
+    cin >> n;
+    Vector v1(n);
+    v1.set_Vector();
+    Vector v2 = v1;
+    v2.get_Vector();
 
-    getchar(); getchar();
     return 0;
 }

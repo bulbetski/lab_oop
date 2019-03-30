@@ -53,9 +53,9 @@ class Vector{
 private:
     std::vector<double> coord;
 public:
-    explicit Vector(int size = 1);
+    explicit Vector(int size = 0);
+    Vector(const Vector &source);
     void set_Vector();
     void get_Vector();
 };
-
 #endif //LABA_3_CLASSES_H

@@ -32,7 +32,5 @@ int main() {
     v1.set_Vector(size);
     v1.get_Vector();
 
-
-    getchar(); getchar();
     return 0;
 }
