@@ -18,7 +18,7 @@ int main() {
 
     Complex n1(1,1);
     Complex n2 = n1;
-    n1.get_Complex();
+    n2.get_Complex();
 
     //4_4
     int n;

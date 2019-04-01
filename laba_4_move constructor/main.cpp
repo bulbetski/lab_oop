@@ -19,6 +19,6 @@ public:
 
 int main() {
     std::vector<Move> t;
-    t.push_back(Move(10)); // ~t.emplace_back(10)
+    t.push_back(Move(10)); // = t.emplace_back(10)
     return 0;
 }
