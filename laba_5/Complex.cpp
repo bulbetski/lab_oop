@@ -16,31 +16,31 @@ Complex::Complex(double re, double im) : Re(re), Im(im) {}
 
 Complex &Complex::operator=(Complex const &rhs) {
     cout << "After overloaded = is called." << endl;
-    this -> Re = rhs.Re;
-    this -> Im = rhs.Im;
+    Re = rhs.Re;
+    Im = rhs.Im;
     return *this;
 }
 
 Complex &Complex::operator++() {
     cout << "After overloaded ++ operator is called." << endl;
-    this -> Re++;
-    this -> Im++;
+    Re++;
+    Im++;
     return *this;
 }
 
 Complex &Complex::operator--(int) {
     cout << "After overloaded -- is called." << endl;
-    this -> Re--;
-    this -> Im--;
+    Re--;
+    Im--;
     return *this;
 }
 
 bool Complex::operator==(Complex const &rhs) {
-    return this -> Re == rhs.Re && this -> Im == rhs.Im;
+    return Re == rhs.Re && this -> Im == rhs.Im;
 }
 
 bool Complex::operator!=(Complex const &rhs) {
-    return !(this -> Re == rhs.Re & this -> Im == rhs.Im);
+    return !(Re == rhs.Re & this -> Im == rhs.Im);
 }
 
 std::ostream &operator<<(std::ostream &os, const Complex &complex) {

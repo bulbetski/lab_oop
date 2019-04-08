@@ -39,6 +39,5 @@ int main() {
     cout << "v1 == v2: " << (v1 == v2) << endl;
     cout << "v1 != v2: " << (v1 != v2) << endl;
 
-    getchar(); getchar();
     return 0;
 }
