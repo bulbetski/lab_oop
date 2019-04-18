@@ -23,7 +23,7 @@ int main() {
     Animal an;
 
     Dog d;
-    
+
     d.setAlive(false);
     cout << d.isAlive();
     return 0;
