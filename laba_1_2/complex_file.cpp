@@ -74,6 +74,7 @@ void file_input(){
 
 int vector_fill(std::vector<Complex> &array) {
     int sign = 0;
+    bool minus = false;
     int k = 0;
     std::string num;
     std::string temp;
@@ -82,24 +83,30 @@ int vector_fill(std::vector<Complex> &array) {
 
     std::ifstream File("complex.txt");
     while (getline(File, num)) {
-        for (int i = 0; i < num.size(); i++) {
-            if (num[i] == '-' || num[i] == '+')
+        for (int i = 1; i < num.size(); i++) {
+            if (num[i] == '-' || num[i] == '+'){
                 sign = i;
-        }
-        for (int z = 0; z < 2; z++) {
-            temp = " ";
-            for (int i = 0; i < sign; i++)
-                temp[i] = num[i];
-            re = std::stod(temp);
-
-            temp = " ";
-            for (int i = sign + 2; i < num.size() - 1; i++)
-                temp[i - sign - 2] = num[i];
-            im = std::stod(temp);
-            temp = "";
+                if (num[i] == '-')
+                    minus = true;
             }
+        }
+
+
+        for (int i = 0; i < sign; i++)
+            temp[i] = num[i];
+        re = std::stod(temp);
+
+        for (int i = sign + 2; i < num.size(); i++)
+            temp[i - sign - 2] = num[i];
+        im = std::stod(temp);
+        if (minus)
+            im *= -1;
+
+        temp = "";
+
         array.emplace_back(re, im);
         k++;
+        minus = false;
     }
     File.close();
     return k;
