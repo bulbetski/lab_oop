@@ -1,5 +1,7 @@
-#include "classes.h"
-
+#include "Child.h"
+#include "Tiles.h"
+#include "Complex.h"
+#include "Vector.h"
 
 int main() {
     //4_1
@@ -25,7 +27,7 @@ int main() {
     cout << "Type in the number of coordinates: ";
     cin >> n;
     Vector v1(n);
-    v1.set_Vector();
+    v1.set_Vector(n);
     Vector v2 = v1;
     v2.get_Vector();
 

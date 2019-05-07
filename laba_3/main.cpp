@@ -1,5 +1,7 @@
-#include "classes.h"
-
+#include "Child.h"
+#include "Tiles.h"
+#include "Complex.h"
+#include "Vector.h"
 
 int main() {
     //3_1
